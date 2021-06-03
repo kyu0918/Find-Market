@@ -3,12 +3,14 @@ package com.example.fleemarket;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TosAgree extends AppCompatActivity {
 
@@ -71,6 +73,19 @@ public class TosAgree extends AppCompatActivity {
                 }
                 else if(agree1.isChecked()&&agree2.isChecked()){
                     agreeall.setChecked(true);
+                }
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(agreeall.isChecked()){
+                    Intent intent = new Intent(getApplicationContext(),SignUp.class);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "전체약관에 동의해 주세요.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
