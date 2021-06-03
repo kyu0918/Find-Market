@@ -4,13 +4,16 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class TosAgree extends AppCompatActivity {
 
     CheckBox agreeall,agree1,agree2;
+    TextView tosagree1,tosagree2;
     ImageButton next;
 
     @Override
@@ -26,6 +29,12 @@ public class TosAgree extends AppCompatActivity {
         agree2 = (CheckBox)findViewById(R.id.agree2);
 
         next = (ImageButton)findViewById(R.id.next);
+
+        tosagree1 = (TextView)findViewById(R.id.tosagree1);
+        tosagree2 = (TextView)findViewById(R.id.tosagree2);
+
+        tosagree1.setMovementMethod(new ScrollingMovementMethod());
+        tosagree2.setMovementMethod(new ScrollingMovementMethod());
 
         agreeall.setOnClickListener(new View.OnClickListener() {
             @Override
