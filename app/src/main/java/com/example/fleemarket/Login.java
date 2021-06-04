@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Login extends AppCompatActivity {
 
     ImageButton login;
+    private TextView signUp;
 
     private FirebaseAuth mAuth;
     private static final String TAG = "Loding";
@@ -37,6 +39,7 @@ public class Login extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         login = (ImageButton)findViewById(R.id.login1);
+        signUp = (TextView)findViewById(R.id.signUp);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +47,18 @@ public class Login extends AppCompatActivity {
                 Login();
             }
         });
+
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(signUp.isClickable()){
+                    Intent intent = new Intent(Login.this, SignUp.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+
     } //onCreat()
 
     private void Login() {
