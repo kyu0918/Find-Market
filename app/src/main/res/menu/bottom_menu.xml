@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        app:showAsAction="always"
+        android:icon="@drawable/homebtn"
+        android:enabled="true"
+        android:checked="true"
+        android:title="HOME"
+        />
+    <item
+        android:id="@+id/interest"
+        app:showAsAction="always"
+        android:icon="@drawable/interestbtn"
+        android:enabled="true"
+        android:checked="true"
+        android:title="INTEREST"
+        />
+    <item
+        android:id="@+id/chat"
+        app:showAsAction="always"
+        android:icon="@drawable/chatbtn"
+        android:enabled="true"
+        android:checked="true"
+        android:title="CHAT"
+        />
+    <item
+        android:id="@+id/my_account"
+        app:showAsAction="always"
+        android:icon="@drawable/myaccountbtn"
+        android:enabled="true"
+        android:checked="true"
+        android:title="MY_ACCOUNT"
+        />
+
+
+</menu>
