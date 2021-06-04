@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1069240578828",
+    "project_id": "market-sure",
+    "storage_bucket": "market-sure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069240578828:android:f23a87e798198a51884f29",
+        "android_client_info": {
+          "package_name": "com.example.fleemarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069240578828-3m59uujp5cq73djkj4gr69jnb0rvihef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiGCuUSfJWtuW6uWqxB0l6MtEM-QC9iQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069240578828-3m59uujp5cq73djkj4gr69jnb0rvihef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
