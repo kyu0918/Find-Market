@@ -30,7 +30,7 @@ public class MainFrame extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         ab.hide();
 
-        bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavigationView);
+        bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

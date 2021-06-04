@@ -7,7 +7,6 @@
         app:showAsAction="always"
         android:icon="@drawable/homebtn"
         android:enabled="true"
-        android:checked="true"
         android:title="HOME"
         />
     <item
@@ -15,7 +14,6 @@
         app:showAsAction="always"
         android:icon="@drawable/interestbtn"
         android:enabled="true"
-        android:checked="true"
         android:title="INTEREST"
         />
     <item
@@ -23,7 +21,6 @@
         app:showAsAction="always"
         android:icon="@drawable/chatbtn"
         android:enabled="true"
-        android:checked="true"
         android:title="CHAT"
         />
     <item
@@ -31,7 +28,6 @@
         app:showAsAction="always"
         android:icon="@drawable/myaccountbtn"
         android:enabled="true"
-        android:checked="true"
         android:title="MY_ACCOUNT"
         />
 
