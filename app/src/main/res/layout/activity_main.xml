@@ -14,12 +14,12 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:src="@drawable/logo" />
+
     <ImageView
         android:layout_width="200dp"
         android:layout_height="220dp"
-        android:src="@drawable/logoimg"
         android:layout_gravity="center"
-        />
+        android:src="@drawable/logoimg" />
 
     <LinearLayout
         android:layout_width="wrap_content"
