@@ -22,17 +22,19 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="110dp"
-            android:layout_height="90dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginEnd="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
             android:src="@drawable/logo" />
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-
-            android:src="@android:drawable/ic_input_add" />
+            android:id="@+id/productRegister"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="70dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:scaleType="fitCenter"
+            android:background="#e9ddc8"
+            android:src="@drawable/plusbtn" />
 
     </LinearLayout>
 
