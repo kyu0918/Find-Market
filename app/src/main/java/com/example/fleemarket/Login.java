@@ -59,7 +59,7 @@ public class Login extends AppCompatActivity {
         });
 
 
-    } //onCreat()
+    } //onCreate()
 
     private void Login() {
         String email = ((EditText) findViewById(R.id.edtId)).getText().toString();
