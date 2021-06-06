@@ -4,7 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#e9ddc8"
-    tools:context=".ProductRegister">
+    tools:context=".SignUp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품등록"
+        android:textSize="50sp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_image"
+        />
+
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="상품명"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/product_name"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="#FFFAF0"
+            android:hint="상품명을 입력하세요." />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text=" 가 격 "
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/product_price"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFAF0"
+            android:layout_marginLeft="20dp"
+            android:hint="가격을 입력하세요."
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="직거래 희망 위치"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:src="@drawable/googlemapex"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/product_register"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="#e9ddc8"
+        android:src="@drawable/productregisterbtn"
+        />
 
 </LinearLayout>
