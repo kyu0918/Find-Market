@@ -52,7 +52,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(signUp.isClickable()){
-                    Intent intent = new Intent(Login.this, SignUp.class);
+                    Intent intent = new Intent(Login.this, TosAgree.class);
                     startActivity(intent);
                 }
             }

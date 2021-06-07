@@ -35,33 +35,28 @@
         android:layout_marginTop="40dp"
         android:layout_width="400dp"
         android:layout_height="wrap_content">
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="아이디"
+            android:layout_marginLeft="10dp"
+            android:text=" 이 메 일 "
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
         <EditText
-            android:id="@+id/jId"
+            android:id="@+id/emailaddress"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:background="#FFFAF0"
-            android:hint="ID를 입력하세요." />
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="30dp"
             android:layout_marginLeft="10dp"
-            android:adjustViewBounds="true"
-            android:background="#e9ddc8"
-            android:scaleType="fitCenter"
-            android:src="@drawable/idcheck" />
+            android:hint="E-mail을 입력하세요."
+            android:singleLine="true"
+            android:inputType="textEmailAddress"/>
+
     </LinearLayout>
+
+
+
 
     <LinearLayout
         android:layout_marginTop="10dp"
@@ -80,6 +75,7 @@
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:background="#FFFAF0"
+            android:singleLine="true"
             android:layout_marginLeft="10dp"
             android:hint="PW를 입력하세요."
             android:password="true"/>
@@ -104,12 +100,14 @@
             android:background="#FFFAF0"
             android:layout_marginLeft="10dp"
             android:hint="동일한 PW를 입력하세요."
+            android:singleLine="true"
             android:password="true"/>
         <TextView
-        android:id="@+id/pwdText"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            android:id="@+id/pwdText"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
     </LinearLayout>
 
     <LinearLayout
@@ -130,6 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:background="#FFFAF0"
+            android:singleLine="true"
             android:hint="이름을 입력하세요."/>
 
     </LinearLayout>
@@ -153,32 +152,41 @@
             android:background="#FFFAF0"
             android:layout_marginLeft="10dp"
             android:hint="번호를 입력하세요."
+            android:singleLine="true"
             android:inputType="textPhonetic"/>
     </LinearLayout>
-
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="400dp"
         android:layout_height="wrap_content">
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text=" 이 메 일 "
+            android:layout_marginLeft="20dp"
+            android:text="닉네임"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/emailaddress"
+            android:id="@+id/jId"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:background="#FFFAF0"
-            android:layout_marginLeft="10dp"
-            android:hint="E-mail을 입력하세요."
-            android:inputType="textEmailAddress"/>
+            android:singleLine="true"
+            android:hint="닉네임을 입력하세요." />
 
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:background="#e9ddc8"
+            android:scaleType="fitCenter"
+            android:src="@drawable/idcheck" />
     </LinearLayout>
-    
     <ImageButton
         android:id="@+id/sign_in"
         android:layout_width="80dp"
