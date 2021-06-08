@@ -5,7 +5,9 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -24,6 +26,7 @@ public class Login extends AppCompatActivity {
 
     ImageButton login;
     private TextView signUp;
+    private TextView find_password;
 
     private FirebaseAuth mAuth;
     private static final String TAG = "Loading";
@@ -38,8 +41,17 @@ public class Login extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        find_password = (TextView)findViewById(R.id.find_password);
         login = (ImageButton)findViewById(R.id.login1);
         signUp = (TextView)findViewById(R.id.signUp);
+
+        find_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this, FindPassword.class);
+                startActivity(intent);
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
