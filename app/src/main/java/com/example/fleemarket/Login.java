@@ -26,7 +26,7 @@ public class Login extends AppCompatActivity {
     private TextView signUp;
 
     private FirebaseAuth mAuth;
-    private static final String TAG = "Loding";
+    private static final String TAG = "Loading";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
