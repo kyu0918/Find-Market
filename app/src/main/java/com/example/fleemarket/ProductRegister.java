@@ -33,12 +33,15 @@ public class ProductRegister extends AppCompatActivity {
     private  final int GET_GALLERY_IMAGE = 200;
     private ImageView imageview;
     private ImageButton product_register;
-
+    EditText post_address;
     private FirebaseAuth mAuth;
+
+    private static final int SEARCH_ADDRESS_ACTIVITY = 10000;
 
     FirebaseAuth auth= FirebaseAuth.getInstance();
 
     FirebaseUser user=auth.getCurrentUser();
+
 
     private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
@@ -55,6 +58,9 @@ public class ProductRegister extends AppCompatActivity {
         setContentView(R.layout.activity_product_register);
 
         mAuth=FirebaseAuth.getInstance();
+
+        //우편번호
+        post_address = (EditText) findViewById(R.id.post_address);
 
         imageview = (ImageView)findViewById(R.id.product_image);
         product_register = (ImageButton)findViewById(R.id.product_register);
@@ -84,32 +90,31 @@ public class ProductRegister extends AppCompatActivity {
             }
         });
 
+        // 주소 클릭시 WebViewActivity로 이동
+
+        post_address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(post_address.isClickable()){
+                    Intent intent = new Intent(ProductRegister.this, WebViewActivity.class);
+                    startActivityForResult(intent, SEARCH_ADDRESS_ACTIVITY);
+                }
+            }
+        });
 
     }//onCreate
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if(requestCode == GET_GALLERY_IMAGE && resultCode == RESULT_OK && data != null && data.getData() != null){
-
-            Uri selectedImageUri = data.getData();
-            imageview.setImageURI(selectedImageUri);
-        }
-    }
-
 
     private void productRegister(){
 
         String pName =((EditText)findViewById(R.id.product_name)).getText().toString();
         String pPrice =((EditText)findViewById(R.id.product_price)).getText().toString();
+        String pAddress = ((EditText)findViewById(R.id.post_address)).getText().toString();
 
-        if(pName.length()>0 && pPrice.length()>0){
+        if(pName.length()>0 && pPrice.length()>0 && pAddress.length()>0){
             FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
             FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-            ProductInfo productInfo = new ProductInfo(pName, pPrice);
+            ProductInfo productInfo = new ProductInfo(pName, pPrice, pAddress);
 
             if(user!=null) {
                 db.collection("product").document(pName).set(productInfo)
@@ -144,10 +149,31 @@ public class ProductRegister extends AppCompatActivity {
 
                 product.put("Name",pName);
                 product.put("Price",pPrice);
+                product.put("Address", pAddress);
 
                 startToast("상품 등록이 완료되었습니다.");
             }
         });
+        }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent intent){
+
+        super.onActivityResult(requestCode, resultCode, intent);
+
+        switch(requestCode){
+
+            case SEARCH_ADDRESS_ACTIVITY:
+
+                if(resultCode == RESULT_OK){
+
+                    String data = intent.getExtras().getString("data");
+                    if (data != null)
+                        post_address.setText(data.substring(7));
+
+                }
+                break;
+
         }
     }
 

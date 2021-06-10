@@ -89,14 +89,27 @@
             android:text="직거래 희망 위치"
             android:textSize="20sp"
             android:textStyle="bold"/>
-        <ImageView
+        <!--<ImageView
             android:layout_width="350dp"
             android:layout_height="150dp"
             android:src="@drawable/googlemapex"
             android:scaleType="fitCenter"
             android:layout_gravity="center"
-            />
-
+            />-->
+        <EditText
+            android:id="@+id/post_address"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="주    소"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="#FFFAF0"/>
     </LinearLayout>
 
 
