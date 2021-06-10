@@ -7,12 +7,84 @@
     android:background="#e9ddc8"
     tools:context=".MyAccount">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="MY_ACCOUNT"
-        android:textSize="30sp"
-        />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:background="#f3ebde">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="내 정보"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="230dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/kimdongkyu"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="별양동 핵빤찌"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="#9cc0ba"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/buy_list_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/buybtn"
+                android:background="#f3ebde"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/sell_list_btn"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/sellbtn"
+                android:background="#f3ebde"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/edit_inform_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/editinform"
+                android:background="#f3ebde"
+                android:scaleType="fitCenter"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </LinearLayout>
