@@ -57,7 +57,7 @@ public class Home extends Fragment {
         List<String> contentList = Arrays.asList("230 XRP.","540 XRP.","785 XRP.","15 XRP","35 XRP","240 XRP");
         List<Integer> rsIdList = Arrays.asList(
                 R.drawable.keyboard,R.drawable.louisvuitton,
-                R.drawable.ipad,R.drawable.gifticon,R.drawable.uniform,R.drawable.sellbtn
+                R.drawable.ipad,R.drawable.gifticon,R.drawable.uniform,R.drawable.budspro
         );
 
         for (int i=0;i<6;i++) {

@@ -2,6 +2,8 @@ package com.example.fleemarket;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +58,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ItemViewHolder
             textView1 = itemView.findViewById(R.id.textView1);
             textView2 = itemView.findViewById(R.id.textView2);
             imageView1 = itemView.findViewById(R.id.imageView1);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), ProductInformation.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
 
         }
 

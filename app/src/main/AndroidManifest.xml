@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FleeMarket">
-        <activity android:name=".HomeData"></activity>
+        <activity android:name=".ProductInformation"></activity>
+        <activity android:name=".HomeData" />
         <activity android:name=".FindPassword" />
         <activity android:name=".ProductRegister" />
         <activity android:name=".MyAccount" />
