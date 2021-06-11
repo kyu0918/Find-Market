@@ -110,7 +110,7 @@ public class ProductRegister extends AppCompatActivity {
         String pPrice =((EditText)findViewById(R.id.product_price)).getText().toString();
         String pAddress = ((EditText)findViewById(R.id.post_address)).getText().toString();
 
-        if(pName.length()>0 && pPrice.length()>0 && pAddress.length()>0){
+        if(pName.length()>0 && pPrice.length()>0){
             FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
             FirebaseFirestore db = FirebaseFirestore.getInstance();
 

@@ -2,14 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fleemarket">
 
-
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
-
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FleeMarket">
-        <activity android:name=".FindPassword"></activity>
+        <activity android:name=".HomeData"></activity>
+        <activity android:name=".FindPassword" />
         <activity android:name=".ProductRegister" />
         <activity android:name=".MyAccount" />
         <activity android:name=".Chat" />
@@ -31,13 +26,13 @@
             android:value="2.1" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBBz6u5kr6k1thWcks6D89a1CmK_X9waHA"/>
+            android:value="AIzaSyBBz6u5kr6k1thWcks6D89a1CmK_X9waHA" />
 
         <activity android:name=".SignUp" />
         <activity android:name=".TosAgree" />
         <activity android:name=".Login" />
-        <activity android:name=".MapsActivity"/>
-        <activity android:name=".WebViewActivity"/>
+        <activity android:name=".MapsActivity" />
+        <activity android:name=".WebViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
