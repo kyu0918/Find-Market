@@ -114,16 +114,19 @@ public class ProductRegister extends AppCompatActivity {
             FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
             FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+            FirebaseUser User = firebaseAuth.getCurrentUser();
+            String uid = User.getUid();
+
             ProductInfo productInfo = new ProductInfo(pName, pPrice, pAddress);
 
             if(user!=null) {
-                db.collection("product").document(pName).set(productInfo)
+                db.collection("product").document(uid).collection(" product_details").document(pName).set(productInfo)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        startToast("상품이 등록되었습니다.");
                         Intent intent = new Intent(getApplicationContext(),MainFrame.class);
                         startActivity(intent);
+                        startToast("상품이 등록되었습니다.");
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -151,7 +154,6 @@ public class ProductRegister extends AppCompatActivity {
                 product.put("Price",pPrice);
                 product.put("Address", pAddress);
 
-                startToast("상품 등록이 완료되었습니다.");
             }
         });
         }
