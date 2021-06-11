@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -32,6 +33,20 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ItemViewHolder
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder itemViewHolder, int position) {
         itemViewHolder.onBind(dataList.get(position));
+//        itemViewHolder.imageView1.setImageResource(dataList.get(position).getResId());
+//        itemViewHolder.textView1.setText(dataList.get(position).getTitle());
+
+        itemViewHolder.imageView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ProductInformation.class);
+                intent.putExtra("number", position);
+                intent.putExtra("title", dataList.get(position).getTitle());
+                intent.putExtra("content", dataList.get(position).getContent());
+                v.getContext().startActivity(intent);
+                Toast.makeText(v.getContext(), "클릭 되었습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -59,13 +74,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ItemViewHolder
             textView2 = itemView.findViewById(R.id.textView2);
             imageView1 = itemView.findViewById(R.id.imageView1);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), ProductInformation.class);
-                    v.getContext().startActivity(intent);
-                }
-            });
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(v.getContext(), ProductInformation.class);
+//                    v.getContext().startActivity(intent);
+//                }
+//            });
 
         }
 
