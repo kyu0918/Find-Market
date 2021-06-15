@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FleeMarket">
-        <activity android:name=".ProductInformation"></activity>
+        <activity android:name=".BuyList"></activity>
+        <activity android:name=".SellList" />
+        <activity android:name=".ProductInformation" />
         <activity android:name=".HomeData" />
         <activity android:name=".FindPassword" />
         <activity android:name=".ProductRegister" />
