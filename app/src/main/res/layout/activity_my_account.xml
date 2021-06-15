@@ -32,17 +32,18 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/jImage"
                 android:layout_width="170dp"
                 android:layout_height="230dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/kimdongkyu"/>
 
             <TextView
+                android:id="@+id/jId"
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="15dp"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:text="별양동 핵빤찌"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:background="#9cc0ba"
