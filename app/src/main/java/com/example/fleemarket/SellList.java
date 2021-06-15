@@ -39,7 +39,7 @@ public class SellList extends AppCompatActivity {
         );
 
         for (int i=0;i<6;i++) {
-            HomeData data = new HomeData();
+            SellData data = new SellData();
             data.setTitle(titleList.get(i));
             data.setContent(contentList.get(i));
             data.setResId(rsIdList.get(i));

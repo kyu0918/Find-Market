@@ -12,11 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 public class SellListAdapter extends RecyclerView.Adapter<SellListAdapter.ItemViewHolder> {
 
-    ArrayList<HomeData> dataList = new ArrayList<HomeData>();
+    ArrayList<SellData> dataList = new ArrayList<>();
 
     @NonNull
     @Override
@@ -55,7 +54,7 @@ public class SellListAdapter extends RecyclerView.Adapter<SellListAdapter.ItemVi
     }
 
     // Data 객체(아이템) 을 하나씩 추가시킨다.
-    public void addItem(HomeData data) {
+    public void addItem(SellData data) {
         dataList.add(data);
     }
 
@@ -85,7 +84,7 @@ public class SellListAdapter extends RecyclerView.Adapter<SellListAdapter.ItemVi
         }
 
         // 실제 데이터들을 1:1 대응하여 각각의 내부뷰에 바인딩시킨다.
-        void onBind(HomeData data) {
+        void onBind(SellData data) {
             textView1.setText(data.getTitle());
             textView2.setText(data.getContent());
             imageView1.setImageResource(data.getResId());

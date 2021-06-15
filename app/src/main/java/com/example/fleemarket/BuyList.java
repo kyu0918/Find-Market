@@ -11,7 +11,7 @@ import java.util.List;
 
 public class BuyList extends AppCompatActivity {
 
-    SellListAdapter adapter;
+    BuyListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class BuyList extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView_buy.setLayoutManager(linearLayoutManager);
 
-        adapter = new SellListAdapter();
+        adapter = new BuyListAdapter();
         recyclerView_buy.setAdapter(adapter);
 
         getData();
@@ -39,7 +39,7 @@ public class BuyList extends AppCompatActivity {
         );
 
         for (int i=0;i<6;i++) {
-            HomeData data = new HomeData();
+            BuyData data = new BuyData();
             data.setTitle(titleList.get(i));
             data.setContent(contentList.get(i));
             data.setResId(rsIdList.get(i));
