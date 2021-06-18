@@ -40,7 +40,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         customViewHolder.imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), ProductInformation.class);
+                Intent intent = new Intent(v.getContext(), UserChat.class);
                 intent.putExtra("number", position);
                 intent.putExtra("title", dataList.get(position).getTitle());
                 intent.putExtra("content", dataList.get(position).getContent());

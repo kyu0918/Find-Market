@@ -7,14 +7,15 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
-        android:hardwareAccelerated="false"
         android:theme="@style/Theme.FleeMarket">
-        <activity android:name=".BuyList"></activity>
+        <activity android:name=".UserChat"></activity>
+        <activity android:name=".BuyList" />
         <activity android:name=".SellList" />
         <activity android:name=".ProductInformation" />
         <activity android:name=".HomeData" />
