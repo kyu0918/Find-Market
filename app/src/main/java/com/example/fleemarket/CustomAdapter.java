@@ -44,6 +44,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
                 intent.putExtra("number", position);
                 intent.putExtra("title", dataList.get(position).getTitle());
                 intent.putExtra("content", dataList.get(position).getContent());
+                intent.putExtra("userImg", position);
                 v.getContext().startActivity(intent);
                 Toast.makeText(v.getContext(), "채팅방에 접속하셨습니다.", Toast.LENGTH_SHORT).show();
             }
@@ -83,7 +84,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         void onBind(ChatData data) {
             textView1.setText(data.getTitle());
             textView2.setText(data.getContent());
-            imageView1.setImageResource(data.getResId());
+            imageView1.setImageResource(data.getUserImg());
+            imageView2.setImageResource(data.getResId());
 
         }
     }

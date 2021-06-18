@@ -9,6 +9,7 @@ public class ChatData {
     private String title;
     private String content;
     private int resId;
+    private int userImg;
 
     public String getTitle() {
         return title;
@@ -33,4 +34,8 @@ public class ChatData {
     public void setResId(int resId) {
         this.resId = resId;
     }
+
+    public int getUserImg() {return userImg;}
+
+    public void setUserImg(int userImg) {this.userImg = userImg;}
 }

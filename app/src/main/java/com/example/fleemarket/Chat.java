@@ -49,12 +49,15 @@ public class Chat extends Fragment {
         List<String> contentList = Arrays.asList("안녕하세요","채팅이 시작됨.","네고 될까요~~?");
         List<Integer> rsIdList = Arrays.asList(
                 R.drawable.keyboard,R.drawable.louisvuitton, R.drawable.ipad);
+        List<Integer> userImgList = Arrays.asList(
+                R.drawable.lsh,R.drawable.bby,R.drawable.sik);
 
         for (int i=0;i<3;i++) {
             ChatData data = new ChatData();
             data.setTitle(titleList.get(i));
             data.setContent(contentList.get(i));
             data.setResId(rsIdList.get(i));
+            data.setUserImg(userImgList.get(i));
 
             // adapter에 방금 만든 Data 객체를 추가해 넣는다.
             adapter.addItem(data);
