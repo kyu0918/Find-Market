@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.firebase.firestore.auth.User;
 
 public class ProductInformation extends AppCompatActivity {
     private Intent intent;
@@ -13,12 +17,16 @@ public class ProductInformation extends AppCompatActivity {
     private String title;
     private String content;
     private ImageView imageView;
+    private ImageButton sendMsg;
     private TextView textView, textView1, textView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_information);
+
+        sendMsg = (ImageButton)findViewById(R.id.send_msg_btn);
+
 
         intent = getIntent();
         number = intent.getIntExtra("number", -1);
@@ -75,5 +83,13 @@ public class ProductInformation extends AppCompatActivity {
                 textView2.setText("주소 : 인천광역시 미추홀구 미추홀대로 708(주안동)");
                 break;
         }
-    }
+
+        sendMsg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), UserChat.class);
+                startActivity(intent);
+            }
+        });
+    } //onCreate
 }
