@@ -6,7 +6,7 @@
     android:padding="6dp"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:background="#e9ddc8">
+    android:background="@drawable/borderline1">
 
     <ImageView
         android:id="@+id/imageView1"

@@ -29,14 +29,10 @@
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBBz6u5kr6k1thWcks6D89a1CmK_X9waHA" />
 
         <activity android:name=".SignUp" />
         <activity android:name=".TosAgree" />
         <activity android:name=".Login" />
-        <activity android:name=".MapsActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
